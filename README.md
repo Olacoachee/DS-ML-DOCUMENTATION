@@ -118,6 +118,7 @@ sns.countplot(x='Claim', data=df)
 plt.title("Distribution of Insurance Claims")
 plt.show()
 ```
-
+<img width="388" height="266" alt="Distribution of Ins Claim" src="https://github.com/user-attachments/assets/9f231a80-b5dd-4818-9ffa-fcabf47eb969" /> <br>
+Figure 1: Distribution of Insurrance Claim 
 ## Author
 Monday Olawale
