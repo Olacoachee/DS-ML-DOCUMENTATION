@@ -643,6 +643,9 @@ results = pd.DataFrame({
 
 <img width="454" height="214" alt="Model Comparison" src="https://github.com/user-attachments/assets/5065fa82-2f52-48e5-90db-b6620b76a0fa" /> <br> Figure 25: Model Comparison
 
+The Random Forest model generally shows the strongest performance in terms of overall accuracy and precision, while the Decision Tree model achieves the highest recall.
+Among the evaluated models, the Random Forest classifier outperformed the others across most evaluation metrics, particularly ROC-AUC and F1-score. This indicates a stronger ability to distinguish between buildings that are likely to experience insurance claims and those that are not.
+While Logistic Regression offers better interpretability, Random Forest provides superior predictive performance and is therefore selected as the final model.
 
 ## Author
 Monday Olawale
