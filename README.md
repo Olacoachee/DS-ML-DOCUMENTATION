@@ -444,7 +444,25 @@ categorical_transformer = Pipeline(steps=[
 ```
 ### 6 Combine Pipelines with ColumnTransformer
 In this step, the numerical and categorical preprocessing pipelines were combined using a ColumnTransformer. This allows each feature type to be processed with the appropriate transformations in a single, unified preprocessing step. The resulting preprocessor ensures consistent and reproducible data preparation before model training.
+```
+preprocessor = ColumnTransformer(
+    transformers=[
+('num', numeric_transformer, numeric_features),
+        ('cat', categorical_transformer, categorical_features)
+]
+)
+```
 
+# STEP 7: MODEL BUILDING
+# In this aspect, I will train 3 different models, including Logistic Regression (baseline), Decision Tree, and Random Forest. However, all the models will use the same preprocessing pipeline for fairness.
+## 1. Logistic Regression (Baseline Model)
+In this step, a Logistic Regression model was implemented as the baseline classifier. The model was built using a pipeline that integrates the preprocessing stage with the classifier, ensuring that all transformations are applied consistently during training. The class_weight='balanced' option was used to address class imbalance, and the number of iterations was increased to ensure model convergence. The model was then trained on the training dataset.
+```
+log_reg = Pipeline(steps=[
+    ('preprocessor', preprocessor),
+    ('classifier', LogisticRegression(max_iter=1000, class_weight='balanced'))
+])
+```
 
 
 ## Author
