@@ -462,6 +462,7 @@ log_reg = Pipeline(steps=[
     ('preprocessor', preprocessor),
     ('classifier', LogisticRegression(max_iter=1000, class_weight='balanced'))
 ])
+log_reg.fit(X_train, y_train)
 ```
 
 
