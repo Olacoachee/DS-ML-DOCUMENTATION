@@ -406,6 +406,12 @@ categorical_features = X.select_dtypes(include='object').columns
 
 numeric_features, categorical_features
 ```
+### 3. CONVERT ALL CATEGORICAL COLUMNS TO STRING
+In this step, all identified categorical features were explicitly converted to the string data type. This ensures consistency in data types and prevents potential issues during categorical encoding in the modeling pipeline, particularly when applying techniques such as one-hot encoding.
+```
+for col in categorical_features:
+    df_clean[col] = df_clean[col].astype(str)
+```
 
 ## Author
 Monday Olawale
