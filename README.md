@@ -96,7 +96,7 @@ Memory usage, and data consistency. Understanding the dataset structure at this 
 ```
 df.info()
 ```
-<img width="255" height="247" alt="Basic Information" src="https://github.com/user-attachments/assets/3f7a47ef-8ea6-4d1d-a706-21398753fe1f" /> <br> Table 2: Data Basic Information
+<img width="255" height="247" alt="Basic Information" src="https://github.com/user-attachments/assets/3f7a47ef-8ea6-4d1d-a706-21398753fe1f" /> <br> Figure 1: Data Basic Information
 
 ## 3. Basic Dataset Information
 The df.info() function was used to examine the structural properties of the dataset. This includes the number of rows and columns, data types of each feature, non-null counts, and overall memory usage. This initial inspection is critical for designing an effective data preprocessing strategy and ensuring the dataset is suitable for exploratory data analysis and machine learning modeling.
@@ -104,6 +104,7 @@ The df.info() function was used to examine the structural properties of the data
 ```
 df.describe()
 ```
+
 ## 4. Missing Values Analysis
 The df.isnull().sum() function was used to identify and quantify missing values across all features in the dataset. Sorting the results in descending order helped highlight variables with the highest number of missing entries. Understanding the pattern and scale of missing values is a crucial step in data preprocessing, as improper handling of missing data can significantly impact model performance and reliability.
 
