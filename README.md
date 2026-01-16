@@ -291,6 +291,44 @@ The distribution of the target variable shows that non-claim cases are more
 frequent than claim cases. This indicates a class imbalance, which is common
 in insurance datasets and must be considered during model evaluation.
 
+# 2 Numerical Features vs Claim
+In this step, I identified all the numerical columns in the cleaned dataset (df_clean) by selecting columns with data types int64 and float64. This helps in understanding which variables can be analyzed quantitatively against the target variable Claim for further statistical analysis or visualization.
+
+```
+num_cols = df_clean.select_dtypes(include=['int64', 'float64']).columns
+num_cols
+```
+# 2.1 Distribution Plotting
+
+```
+for col in num_cols:
+    if col != 'Claim':
+        sns.boxplot(x='Claim', y=col, data=df_clean)
+        plt.title(f"{col} vs Claim")
+        plt.show()
+```
+In this step, I visualized the distribution of numerical features against the target variable Claim. For each numerical column (excluding Claim itself), a boxplot was generated to show how the values vary between different claim outcomes. This helps identify potential patterns, trends, or outliers in the data that may influence claim occurrences.
+
+<img width="387" height="265" alt="YearOfObservation vs Claim" src="https://github.com/user-attachments/assets/5202b44a-45e5-46c5-a8ca-4d9b548094af" /> <br> Figure 5: Year of Observation vs Claim
+
+<img width="367" height="278" alt="Insured_Period vs Claim" src="https://github.com/user-attachments/assets/406b9cc6-55b4-401b-b207-16ae233475d4" /> <br> Figure 6: Insured_Period vs Claim
+
+<img width="372" height="272" alt="Residential vs Claim" src="https://github.com/user-attachments/assets/847722ee-f8bd-4a1e-a430-a8e63af05672" /> Figure 7: Residential vs Claim
+
+<img width="384" height="278" alt="Building Dimension vs Claim" src="https://github.com/user-attachments/assets/37c12340-9288-4116-a511-3aaca014c366" /> Figure 8: Building Dimension vs Claim
+
+<img width="358" height="268" alt="Building_Type vs Claim" src="https://github.com/user-attachments/assets/bf6d19a3-5925-486d-b4ca-dd06b68de312" /> Figure 9: Building_Type vs Claim
+
+<img width="363" height="267" alt="NumberOfWindows vs Claim" src="https://github.com/user-attachments/assets/2efd27da-481a-40b2-8af9-52dd42dc8646" /> Figure 10: NumberOfWindows vs Claim
+
+<img width="378" height="269" alt="Building_Age vs Claim" src="https://github.com/user-attachments/assets/491aafe1-877d-4711-ad18-051529177a6a" /> Figure 11: Building_Age vs Claim
+
+
+
+
+
+
+
 
 
 
