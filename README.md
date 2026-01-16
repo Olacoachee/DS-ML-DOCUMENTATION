@@ -639,7 +639,9 @@ results = pd.DataFrame({
 })
 ```
 
-results
+### results
+
+<img width="454" height="214" alt="Model Comparison" src="https://github.com/user-attachments/assets/5065fa82-2f52-48e5-90db-b6620b76a0fa" /> <br> Figure 25: Model Comparison
 
 
 ## Author
