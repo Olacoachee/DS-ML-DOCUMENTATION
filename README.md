@@ -398,6 +398,14 @@ In this step, the dataset was prepared for modeling by separating the independen
 X = df_clean.drop(columns='Claim')
 y = df_clean['Claim']
 ```
+### 2. Identify Numerical and Categorical Features
+In this step, the feature set (X) was further organized by identifying numerical and categorical variables based on their data types. Numerical features were selected as columns with int64 and float64 types, while categorical features were identified as columns with object type. This separation enables appropriate preprocessing techniques, such as scaling for numerical variables and encoding for categorical variables, in subsequent modeling steps.
+```
+numeric_features = X.select_dtypes(include=['int64', 'float64']).columns
+categorical_features = X.select_dtypes(include='object').columns
+
+numeric_features, categorical_features
+```
 
 ## Author
 Monday Olawale
