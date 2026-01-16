@@ -76,6 +76,7 @@ At this stage, the dataset was loaded from an Excel file into a Pandas DataFrame
 
 The first few rows of the dataset were displayed using df.head() to gain an initial overview of the data structure, including column names, data types, and sample observations. This preliminary inspection helped verify that the data was loaded successfully and provided early insights into the variables available for analysis and modeling.
 This step laid the foundation for subsequent data cleaning, exploratory data analysis, and feature engineering.
+
 ```
 df = pd.read_excel(
     r"C:\Users\User\Desktop\DATA SCIENCE & ML\PROJECT CAPSTONE\Train_data.xlsx"
@@ -89,16 +90,19 @@ The df.info() method was used to obtain a concise summary of the dataset, includ
 
 This step provided clarity on:The overall size of the dataset, which variables are numerical or categorical, columns containing missing values that may require preprocessing,
 Memory usage, and data consistency. Understanding the dataset structure at this stage was essential for guiding data cleaning, feature engineering, and selecting appropriate preprocessing techniques before model building.
+
 ```
 df.info()
 ```
 ## 3. Basic Dataset Information
 The df.info() function was used to examine the structural properties of the dataset. This includes the number of rows and columns, data types of each feature, non-null counts, and overall memory usage. This initial inspection is critical for designing an effective data preprocessing strategy and ensuring the dataset is suitable for exploratory data analysis and machine learning modeling.
+
 ```
 df.describe()
 ```
 ## 4. Missing Values Analysis
 The df.isnull().sum() function was used to identify and quantify missing values across all features in the dataset. Sorting the results in descending order helped highlight variables with the highest number of missing entries. Understanding the pattern and scale of missing values is a crucial step in data preprocessing, as improper handling of missing data can significantly impact model performance and reliability.
+
 ```
 df.isnull().sum().sort_values(ascending=False)
 ```
@@ -108,7 +112,9 @@ Before cleaning, it is always good to check the target distribution:
 The df['Claim'].value_counts(normalize=True) was used to check whether the dataset is imbalanced and 
 Whether special techniques (e.g. class weights) may be needed.
 
-```df['Claim'].value_counts(normalize=True)```
+```
+df['Claim'].value_counts(normalize=True)
+```
 
 ## 2. Distribution of Insurrance Claim Plot
 A count plot was created to visualize the distribution of the target variable, Claim, which indicates whether a building had at least one insurance claim during the insured period. Understanding the distribution of the target variable is important because class imbalance can influence model performance and evaluation metrics. This insight helps inform decisions on model selection, evaluation strategy, and the potential need for techniques such as class weighting or resampling.
@@ -120,5 +126,10 @@ plt.show()
 ```
 <img width="388" height="266" alt="Distribution of Ins Claim" src="https://github.com/user-attachments/assets/9f231a80-b5dd-4818-9ffa-fcabf47eb969" /> <br>
 Figure 1: Distribution of Insurrance Claim 
+
+
+
+
+
 ## Author
 Monday Olawale
