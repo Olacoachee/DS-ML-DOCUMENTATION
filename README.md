@@ -135,8 +135,24 @@ plt.show()
 <img width="388" height="266" alt="Distribution of Ins Claim" src="https://github.com/user-attachments/assets/9f231a80-b5dd-4818-9ffa-fcabf47eb969" /> <br>
 Figure 3: Distribution of Insurrance Claim 
 
+# STEP 4: Data Cleaning & Preprocessing
 
+This is one of the most important sections of this project. As the quality of input data directly affects the performance and reliability of machine learning models.
 
+To preserve the integrity of the original dataset, a copy of the raw data was created using:
+
+```
+df_clean = df.copy()
+```
+This ensures that:
+
+- The original dataset remains unchanged and can be referenced at any time
+
+- All cleaning, transformations, and preprocessing steps are applied safely on a separate dataset
+
+- Errors or experimental changes can be reversed without data loss
+
+Working on a clean copy allows for a structured, transparent, and reproducible preprocessing workflow, which is essential for a well-documented data science project.
 
 
 ## Author
