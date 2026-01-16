@@ -369,8 +369,23 @@ Buildings categorized as 'O' have a higher claim probability (approx. 0.25) than
 Settlements labeled as 'R' have a notably higher claim probability (0.25) compared to those labeled as 'U' (approx. 0.21). This indicates that a property's settlement type is a potential differentiator for claim status in this dataset. <br>
 The claim probability varies drastically depending on the Geo_Code, ranging from 100% for some areas down to nearly 0% for others. This indicates that geographic location is a strong predictor of claim status within this dataset.
 
+# 4 Correlation Analysis
+### Correlation matrix plotting
+In this step, I examined the relationships between numerical features by computing a correlation matrix. The correlations were visualized using a heatmap, with annotated values to show the strength and direction of relationships between variables. This helps identify highly correlated features, potential multicollinearity, and variables that may have stronger associations with the target variable.
+```
+plt.figure(figsize=(10,6))
+sns.heatmap(
+    df_clean[num_cols].corr(),
+    annot=True,
+    cmap='coolwarm',
+    fmt=".2f"
+)
+plt.title("Correlation Matrix")
+plt.show()
+```
 
 
+<img width="456" height="324" alt="Correlation Matrix" src="https://github.com/user-attachments/assets/840be94c-6bc5-4b71-9ea0-38f756ebf0a1" />
 
 
 ## Author
