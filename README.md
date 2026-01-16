@@ -557,6 +557,8 @@ evaluate_model(dt_model, X_test, y_test, "Decision Tree")
 
 <img width="417" height="246" alt="Decision Tree Performance" src="https://github.com/user-attachments/assets/91c5ff50-55ce-4a74-9065-34216301d93a" /> <br> Figure 21: Decision Tree Performance
 
+The Decision Tree model has moderate overall accuracy but poor precision, indicating that when it predicts the positive class, it is often incorrect. <br>
+The confusion matrix [[684 421], [120 207]] provides a detailed breakdown of predictions: The large number of false positives (421) relative to true positives (207) confirms the low precision score. The model often predicts the positive class incorrectly, leading to many false alarms.
 
 
 ## Author
