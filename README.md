@@ -331,6 +331,13 @@ The distribution of the Building_Type variable is visually the same whether a cl
 The median number of windows is higher (five) for properties with a claim compared to those without a claim (four). This suggests that having more windows might slightly increase the likelihood of a claim in this dataset. <br>
 The distribution of Building_Age is visually identical for properties with a claim (1) and those without a claim (0). This suggests that building age is not a distinguishing factor for claim status in this dataset.
 
+# 3 Categorical Features vs Claim
+# Identify categorical columns
+```
+cat_cols = df_clean.select_dtypes(include='object').columns
+cat_cols
+```
+In this step, I identified all categorical columns in the cleaned dataset (df_clean) by selecting columns with data type object. These columns can be analyzed against the target variable Claim to explore relationships, patterns, or trends in categorical data.
 
 
 
