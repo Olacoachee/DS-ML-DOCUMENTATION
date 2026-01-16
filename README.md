@@ -560,6 +560,17 @@ evaluate_model(dt_model, X_test, y_test, "Decision Tree")
 The Decision Tree model has moderate overall accuracy but poor precision, indicating that when it predicts the positive class, it is often incorrect. <br>
 The confusion matrix [[684 421], [120 207]] provides a detailed breakdown of predictions: The large number of false positives (421) relative to true positives (207) confirms the low precision score. The model often predicts the positive class incorrectly, leading to many false alarms.
 
+## 4. Evaluate Random Forest
+In this step, the Random Forest model was evaluated on the test dataset using the evaluate model function. Key metrics—accuracy, precision, recall, F1-score, ROC-AUC, and the confusion matrix were calculated to assess the model’s predictive performance. This evaluation allows comparison with the Logistic Regression and Decision Tree models, highlighting the benefits of ensemble learning in handling complex patterns and improving classification of insurance claims.
+```
+evaluate_model(rf_model, X_test, y_test, "Random Forest")
+```
+
+<img width="416" height="245" alt="Random Forest Performance" src="https://github.com/user-attachments/assets/94f2b8cd-eb00-4d82-b161-c5eac533d977" /> <br> Figure 22: Random Forest Performance
+
+The Random Forest model has moderate accuracy but low precision, indicating that when it predicts the positive class, it is often incorrect.
+This means the model is decent at overall classification but generates many false alarms for positive cases.
+The model correctly predicted the positive class. In this case, 160 instances were correctly identified as having a claim. The model correctly predicted the negative class. Here, 849 instances were correctly identified as not having a claim. The model incorrectly predicted the positive class when it was actually negative (Type I error, a "false alarm"). The model predicted 256 claims that didn't actually occur.The model incorrectly predicted the negative class when it was actually positive (Type II error, a "missed opportunity"). The model missed 167 actual claims.
 
 ## Author
 Monday Olawale
