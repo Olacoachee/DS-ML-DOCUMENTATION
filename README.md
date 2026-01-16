@@ -454,7 +454,7 @@ preprocessor = ColumnTransformer(
 ```
 
 # STEP 7: MODEL BUILDING
-# In this aspect, I will train 3 different models, including Logistic Regression (baseline), Decision Tree, and Random Forest. However, all the models will use the same preprocessing pipeline for fairness.
+In this aspect, I will train 3 different models, including Logistic Regression (baseline), Decision Tree, and Random Forest. However, all the models will use the same preprocessing pipeline for fairness.
 ## 1. Logistic Regression (Baseline Model)
 In this step, a Logistic Regression model was implemented as the baseline classifier. The model was built using a pipeline that integrates the preprocessing stage with the classifier, ensuring that all transformations are applied consistently during training. The class_weight='balanced' option was used to address class imbalance, and the number of iterations was increased to ensure model convergence. The model was then trained on the training dataset.
 ```
