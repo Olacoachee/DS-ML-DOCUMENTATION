@@ -387,7 +387,10 @@ plt.show()
 <img width="456" height="324" alt="Correlation Matrix" src="https://github.com/user-attachments/assets/840be94c-6bc5-4b71-9ea0-38f756ebf0a1" /> <br> Figure 17: Correlation Matrix
 
 The strongest relationship in the data is a high positive correlation (0.96) between YearOfObservation and Building_Age.
-The variable Claim has weak positive correlations with Building Dimension (0.30), NumberOfWindows (0.17), and Insured_Period (0.09).
+The variable Claim has weak positive correlations with Building Dimension (0.30), NumberOfWindows (0.17), and Insured_Period (0.09). <br>
+The correlation matrix shows moderate relationships between building-related variables and claim occurrence. No extreme multicollinearity is observed, making the dataset suitable for machine learning models.
+
+
 
 ## Author
 Monday Olawale
