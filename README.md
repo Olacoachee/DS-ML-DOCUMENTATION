@@ -361,6 +361,7 @@ for col in cat_cols:
 
 <img width="370" height="276" alt="ClaimRate by Settlement" src="https://github.com/user-attachments/assets/baf19637-a783-478d-9a34-df47e9886c63" /> <br> Figure 15: ClaimRate by Settlement
 
+<img width="355" height="295" alt="ClaimRate by GeoCode" src="https://github.com/user-attachments/assets/56e0c438-421d-4dcf-a9ad-2c098e6a6ae1" /> <br> Figure 16: ClaimRate by GeoCode
 
 
 
