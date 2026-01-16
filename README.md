@@ -323,6 +323,16 @@ In this step, I visualized the distribution of numerical features against the ta
 
 <img width="378" height="269" alt="Building_Age vs Claim" src="https://github.com/user-attachments/assets/491aafe1-877d-4711-ad18-051529177a6a" /> <br> Figure 11: Building_Age vs Claim
 
+Both claim groups exhibit an identical distribution of YearOfObservation values. This suggests that the observation year is not a determining factor for whether a claim is made in this dataset. <br>
+The distribution of the Insured_Period variable is visually the same whether a claim was made (1) or not (0). This suggests that the duration of the insurance period is not a distinguishing factor for claim status in this dataset. <br>
+All properties in the dataset are categorized as residential, regardless of their claim status (0 or 1). This means that the residential status is constant across all observations and does not differentiate between those who made a claim and those who did not. <br>
+The median Building Dimension is notably higher for properties that had a claim (labeled 1) compared to those without a claim (labeled 0). This suggests that larger building dimensions might be associated with a higher likelihood of a claim in this dataset. <br>
+The distribution of the Building_Type variable is visually the same whether a claim was made (1) or not (0). This suggests that the specific building type number is not a distinguishing factor for claim status in this dataset. <br>
+The median number of windows is higher (five) for properties with a claim compared to those without a claim (four). This suggests that having more windows might slightly increase the likelihood of a claim in this dataset. <br>
+The distribution of Building_Age is visually identical for properties with a claim (1) and those without a claim (0). This suggests that building age is not a distinguishing factor for claim status in this dataset.
+
+
+
 
 
 
