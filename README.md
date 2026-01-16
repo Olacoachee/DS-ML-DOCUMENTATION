@@ -112,6 +112,8 @@ The df.isnull().sum() function was used to identify and quantify missing values 
 ```
 df.isnull().sum().sort_values(ascending=False)
 ```
+<img width="144" height="178" alt="Missing Value" src="https://github.com/user-attachments/assets/279b6a4b-b9c4-47ea-a7f4-cad251a25da5" /> <br> Figure 2: Missing Values
+
 # STEP 3: Target Variable Check
 ## 1. Target Distribution
 Before cleaning, it is always good to check the target distribution:
