@@ -426,5 +426,22 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 ```
 
+## 5 Building the Preprocessing Pipelines
+### Numerical Pipeline, Median imputation, Standard scaling, Categorical Pipeline, Most frequent imputation, and One-Hot Encoding
+In this step, separate preprocessing pipelines were created for numerical and categorical features. Numerical variables were processed using median imputation to handle missing values and standard scaling to normalize feature ranges. Categorical variables were handled with most-frequent imputation for missing values, followed by one-hot encoding to convert categories into a machine-learning-friendly format while safely ignoring unseen categories.
+```
+from sklearn.impute import SimpleImputer
+numeric_transformer = Pipeline(steps=[
+ ('imputer', SimpleImputer(strategy='median')),
+('scaler', StandardScaler())
+])
+
+categorical_transformer = Pipeline(steps=[
+('imputer', SimpleImputer(strategy='most_frequent')),
+('encoder', OneHotEncoder(handle_unknown='ignore'))
+])
+```
+
+
 ## Author
 Monday Olawale
