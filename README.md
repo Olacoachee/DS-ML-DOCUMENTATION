@@ -539,6 +539,9 @@ print("\nConfusion Matrix:")
     print(confusion_matrix(y_test, y_pred))
     print("\n")
  ```
+# 2 Evaluate Logistic Regression
+
+evaluate_model(log_reg, X_test, y_test, "Logistic Regression")
 
 ## Author
 Monday Olawale
