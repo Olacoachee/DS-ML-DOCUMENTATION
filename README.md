@@ -588,6 +588,11 @@ plt.show()
 
 <img width="282" height="273" alt="ROC Curve Regression" src="https://github.com/user-attachments/assets/2642c098-fe19-46a3-9692-c1e59d363e3e" /> <br> Figure 23: ROC Curve Regression
 
+The figure provided is a Receiver Operating Characteristic (ROC) curve for a logistic regression model, which graphically illustrates the model's performance at distinguishing between two classes. 
+- AUC Score: The Area Under the Curve (AUC) is 0.68. An AUC score between 0.5 and 0.7 indicates a weak to acceptable ability to distinguish between classes, meaning the model is better than random guessing (AUC 0.5) but has limited predictive power for real-world application on its own.
+- Curve Shape: The curve plots the True Positive Rate (sensitivity) against the False Positive Rate (1 - specificity). A perfect model's curve would hug the top-left corner, reaching a true positive rate of 1.0 while maintaining a false positive rate of 0.0. This curve, while better than the diagonal random guessing line, is relatively close to the center, reinforcing the moderate performance indicated by the AUC score.
+- Trade-off: The curve shows the trade-off between sensitivity and specificity at different decision thresholds. As the model's ability to identify more true positives increases (moving up the y-axis), it also incorrectly flags more false positives (moving right on the x-axis). 
+
 <img width="286" height="273" alt="ROC Curve RandomForest" src="https://github.com/user-attachments/assets/a315117d-d10a-495e-b81c-d729c2e67628" /> <br> Figure 24: ROC Curve RandomForest
 
 
