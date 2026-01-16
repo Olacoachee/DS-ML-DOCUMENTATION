@@ -659,4 +659,6 @@ The Random Forest model achieved the best overall performance, demonstrating str
 - The model can be integrated into underwriting systems to support data-driven decision-making.
 
 ## Author
-Monday Olawale
+Monday Olawale Alake <br>
+DS&ML Student <br>
+AINOW/2025/2026
