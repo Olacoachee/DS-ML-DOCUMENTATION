@@ -339,6 +339,21 @@ In this step, I identified all categorical columns in the cleaned dataset (df_cl
 cat_cols = df_clean.select_dtypes(include='object').columns
 cat_cols
 ```
+# 3.1 Distribution Plotting
+In this step, I analyzed the relationship between categorical features and the target variable Claim. For each categorical column, I calculated the claim rate (average of Claim) per category and visualized it as a bar chart. This approach highlights which categories are associated with higher or lower probabilities of a claim, providing insights for feature importance and further modeling.
+```
+for col in cat_cols:
+    claim_rate = (
+        df_clean.groupby(col)['Claim']
+        .mean()
+        .sort_values(ascending=False)
+    )
+    
+    claim_rate.plot(kind='bar')
+    plt.title(f"Claim Rate by {col}")
+    plt.ylabel("Claim Probability")
+    plt.show()
+```
 
 
 
