@@ -540,10 +540,15 @@ print("\nConfusion Matrix:")
     print("\n")
  ```
 # 2 Evaluate Logistic Regression
-In this step, the Logistic Regression baseline model was evaluated on the test dataset using the reusable evaluate_model function. Key performance metrics such as accuracy, precision, recall, F1-score, ROC-AUC, and the confusion matrix were calculated to assess how well the model predicts insurance claims. This provides a benchmark for comparing more complex models. <br> Figure 19: 
+In this step, the Logistic Regression baseline model was evaluated on the test dataset using the reusable evaluate_model function. Key performance metrics such as accuracy, precision, recall, F1-score, ROC-AUC, and the confusion matrix were calculated to assess how well the model predicts insurance claims. This provides a benchmark for comparing more complex models.  
 ```
 evaluate_model(log_reg, X_test, y_test, "Logistic Regression")
 ```
+<img width="417" height="249" alt="Regression Performance" src="https://github.com/user-attachments/assets/b547390c-e123-49fc-b450-22ca4d7e879b" /> <br> Figure 20: Regression Performance
+
+The Logistic Regression model exhibits moderate overall performance but struggles with precision, indicating a high rate of false positives. <br>
+The confusion matrix [[812 293], [160 167]] provides a detailed breakdown of predictions: The high number of false positives (293) relative to true positives (167) confirms the low precision score. The model is cautious about predicting the positive class correctly but often flags too many instances incorrectly.
+
 
 
 ## Author
