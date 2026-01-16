@@ -572,5 +572,19 @@ The Random Forest model has moderate accuracy but low precision, indicating that
 This means the model is decent at overall classification but generates many false alarms for positive cases.
 The model correctly predicted the positive class. In this case, 160 instances were correctly identified as having a claim. The model correctly predicted the negative class. Here, 849 instances were correctly identified as not having a claim. The model incorrectly predicted the positive class when it was actually negative (Type I error, a "false alarm"). The model predicted 256 claims that didn't actually occur.The model incorrectly predicted the negative class when it was actually positive (Type II error, a "missed opportunity"). The model missed 167 actual claims.
 
+## 5. ROC Curve
+In this step, ROC curves were plotted for selected models (Logistic Regression and Random Forest) to visualize their trade-off between true positive rate and false positive rate. ROC curves provide an intuitive way to compare classifier performance, assess discrimination ability, and complement numerical metrics like ROC-AUC. This step helps in understanding how well each model separates classes across different threshold settings.
+```
+from sklearn.metrics import RocCurveDisplay
+
+RocCurveDisplay.from_estimator(log_reg, X_test, y_test)
+plt.title("ROC Curve - Logistic Regression")
+plt.show()
+
+RocCurveDisplay.from_estimator(rf_model, X_test, y_test)
+plt.title("ROC Curve - Random Forest")
+plt.show()
+```
+
 ## Author
 Monday Olawale
