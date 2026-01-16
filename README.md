@@ -358,6 +358,11 @@ for col in cat_cols:
 
 
 
+<img width="354" height="269" alt="ClaimRate by Garden" src="https://github.com/user-attachments/assets/55e69df5-972a-4207-a91d-4f38393dc747" />
+<img width="361" height="269" alt="ClaimRate by BuildingPainted" src="https://github.com/user-attachments/assets/f518924f-70f3-40da-b742-255c9839b7ff" />
+<img width="363" height="275" alt="ClaimRate by BuildingFenced" src="https://github.com/user-attachments/assets/329ed30f-632e-414c-8b47-b860271b96de" />
+<img width="370" height="276" alt="ClaimRate by Settlement" src="https://github.com/user-attachments/assets/baf19637-a783-478d-9a34-df47e9886c63" />
+<img width="355" height="295" alt="ClaimRate by GeoCode" src="https://github.com/user-attachments/assets/56e0c438-421d-4dcf-a9ad-2c098e6a6ae1" />
 
 
 
