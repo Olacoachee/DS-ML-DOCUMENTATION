@@ -647,5 +647,16 @@ The Random Forest model generally shows the strongest performance in terms of ov
 Among the evaluated models, the Random Forest classifier outperformed the others across most evaluation metrics, particularly ROC-AUC and F1-score. This indicates a stronger ability to distinguish between buildings that are likely to experience insurance claims and those that are not.
 While Logistic Regression offers better interpretability, Random Forest provides superior predictive performance and is therefore selected as the final model.
 
+# STEP 10: FINAL CONCLUSION & BUSINESS RECOMMENDATIONS
+## Conclusion
+
+This project developed a machine learning model to predict the probability of insurance claims based on building characteristics. The analysis followed a structured data science lifecycle, including data cleaning, exploratory data analysis, feature engineering, modeling, and evaluation.
+
+The Random Forest model achieved the best overall performance, demonstrating strong predictive capability in identifying high-risk buildings. The findings suggest that building age, physical characteristics, and location play important roles in insurance claim occurrence.
+## Business Recommendations
+- Insurance companies can use the model to identify high-risk buildings and adjust premiums accordingly.
+- Preventive measures such as improved building maintenance and security could reduce claim occurrence.
+- The model can be integrated into underwriting systems to support data-driven decision-making.
+
 ## Author
 Monday Olawale
