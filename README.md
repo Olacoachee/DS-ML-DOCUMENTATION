@@ -400,6 +400,7 @@ y = df_clean['Claim']
 ```
 ### 2. Identify Numerical and Categorical Features
 In this step, the feature set (X) was further organized by identifying numerical and categorical variables based on their data types. Numerical features were selected as columns with int64 and float64 types, while categorical features were identified as columns with object type. This separation enables appropriate preprocessing techniques, such as scaling for numerical variables and encoding for categorical variables, in subsequent modeling steps.
+
 ```
 numeric_features = X.select_dtypes(include=['int64', 'float64']).columns
 categorical_features = X.select_dtypes(include='object').columns
@@ -411,6 +412,18 @@ In this step, all identified categorical features were explicitly converted to t
 ```
 for col in categorical_features:
     df_clean[col] = df_clean[col].astype(str)
+```
+### 4. Train–Test Split
+
+#### I split before scaling/encoding to avoid data leakage
+In this step, the dataset was split into training and testing sets to enable unbiased model evaluation. The split was performed before scaling and encoding to prevent data leakage. An 80/20 split was used, with stratification applied to the target variable (Claim) to preserve class distribution across both sets, and a fixed random state to ensure reproducibility.
+```
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.2,
+    random_state=42,
+    stratify=y
+)
 ```
 
 ## Author
