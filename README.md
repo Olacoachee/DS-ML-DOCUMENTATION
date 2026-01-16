@@ -443,6 +443,7 @@ categorical_transformer = Pipeline(steps=[
 ])
 ```
 ### 6 Combine Pipelines with ColumnTransformer
+In this step, the numerical and categorical preprocessing pipelines were combined using a ColumnTransformer. This allows each feature type to be processed with the appropriate transformations in a single, unified preprocessing step. The resulting preprocessor ensures consistent and reproducible data preparation before model training.
 
 
 
