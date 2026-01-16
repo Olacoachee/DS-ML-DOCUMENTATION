@@ -539,7 +539,7 @@ print("\nConfusion Matrix:")
     print(confusion_matrix(y_test, y_pred))
     print("\n")
  ```
-# 2 Evaluate Logistic Regression
+## 2. Evaluate Logistic Regression
 In this step, the Logistic Regression baseline model was evaluated on the test dataset using the reusable evaluate_model function. Key performance metrics such as accuracy, precision, recall, F1-score, ROC-AUC, and the confusion matrix were calculated to assess how well the model predicts insurance claims. This provides a benchmark for comparing more complex models.  
 ```
 evaluate_model(log_reg, X_test, y_test, "Logistic Regression")
@@ -548,6 +548,14 @@ evaluate_model(log_reg, X_test, y_test, "Logistic Regression")
 
 The Logistic Regression model exhibits moderate overall performance but struggles with precision, indicating a high rate of false positives. <br>
 The confusion matrix [[812 293], [160 167]] provides a detailed breakdown of predictions: The high number of false positives (293) relative to true positives (167) confirms the low precision score. The model is cautious about predicting the positive class correctly but often flags too many instances incorrectly.
+
+## 3. Evaluate Decision Tree
+In this step, the Decision Tree model was evaluated on the test dataset using the evaluate_model function. Metrics including accuracy, precision, recall, F1-score, ROC-AUC, and the confusion matrix were computed to measure the model’s ability to predict insurance claims. This evaluation helps compare its performance against the Logistic Regression baseline and assess the impact of capturing non-linear relationships.
+```
+evaluate_model(dt_model, X_test, y_test, "Decision Tree")
+```
+
+<img width="417" height="246" alt="Decision Tree Performance" src="https://github.com/user-attachments/assets/91c5ff50-55ce-4a74-9065-34216301d93a" /> <br> Figure 21: Decision Tree Performance
 
 
 
