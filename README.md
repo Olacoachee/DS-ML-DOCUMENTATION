@@ -595,6 +595,11 @@ The figure provided is a Receiver Operating Characteristic (ROC) curve for a log
 
 <img width="286" height="273" alt="ROC Curve RandomForest" src="https://github.com/user-attachments/assets/a315117d-d10a-495e-b81c-d729c2e67628" /> <br> Figure 24: ROC Curve RandomForest
 
+The image provided is a Receiver Operating Characteristic (ROC) curve for a Random Forest model, which graphically illustrates the model's ability to distinguish between two classes.
+- AUC Score: The Area Under the Curve (AUC) is 0.67. An AUC score between 0.5 and 0.7 indicates a weak to acceptable ability to distinguish between classes, meaning the model is better than random guessing (AUC 0.5) but has limited predictive power for real-world application on its own.
+- Curve Shape: The curve plots the True Positive Rate (sensitivity) against the False Positive Rate (1 - specificity). A perfect model's curve would hug the top-left corner. This curve, while better than the diagonal random guessing line, suggests only moderate performance.
+- Trade-off: The curve shows the trade-off between identifying more true positives and incorrectly flagging more false positives at different decision thresholds.
+
 
 ## Author
 Monday Olawale
