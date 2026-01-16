@@ -508,9 +508,9 @@ rf_model.fit(X_train, y_train)
 
 The workflow utilizes a ColumnTransformer to apply specific preprocessing steps in parallel to different data types (numerical and categorical). The processed data is then fed into a RandomForestClassifier model.
 Three machine learning models were trained to predict the probability of insurance claims:
-a. Logistic Regression was used as a baseline model
-b. Decision Tree captured non-linear patterns
-c. Random Forest leveraged ensemble learning to improve predictive performance
+-  Logistic Regression was used as a baseline model
+-  Decision Tree captured non-linear patterns
+-  Random Forest leveraged ensemble learning to improve predictive performance
 
 Class weights were applied to address class imbalance.
 
