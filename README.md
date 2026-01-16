@@ -104,6 +104,7 @@ The df.info() function was used to examine the structural properties of the data
 ```
 df.describe()
 ```
+<img width="503" height="213" alt="Data Summary" src="https://github.com/user-attachments/assets/77c53c52-3a2b-4f08-b6f2-970eda15b42f" /> <br> Table 2: Statistical summary
 
 ## 4. Missing Values Analysis
 The df.isnull().sum() function was used to identify and quantify missing values across all features in the dataset. Sorting the results in descending order helped highlight variables with the highest number of missing entries. Understanding the pattern and scale of missing values is a crucial step in data preprocessing, as improper handling of missing data can significantly impact model performance and reliability.
