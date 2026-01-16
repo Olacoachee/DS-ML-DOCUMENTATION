@@ -507,7 +507,12 @@ rf_model.fit(X_train, y_train)
 <img width="364" height="212" alt="Pipeline RandomForest" src="https://github.com/user-attachments/assets/d36c21ca-0e02-426f-8973-4da9a0f81692" /> <br> Figure 19: Pipeline RandomForest
 
 The workflow utilizes a ColumnTransformer to apply specific preprocessing steps in parallel to different data types (numerical and categorical). The processed data is then fed into a RandomForestClassifier model.
+Three machine learning models were trained to predict the probability of insurance claims:
+a. Logistic Regression was used as a baseline model
+b. Decision Tree captured non-linear patterns
+c. Random Forest leveraged ensemble learning to improve predictive performance
 
+Class weights were applied to address class imbalance.
 
 ## Author
 Monday Olawale
