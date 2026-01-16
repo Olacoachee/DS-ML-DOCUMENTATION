@@ -154,6 +154,126 @@ This ensures that:
 
 Working on a clean copy allows for a structured, transparent, and reproducible preprocessing workflow, which is essential for a well-documented data science project.
 
+# 3 Fix NumberOfWindows Column
+The NumberOfWindows column contained invalid entries represented by ".", which prevented the column from being treated as a numerical variable. Since this feature is expected to be numeric, corrective preprocessing was required. Median imputation was chosen because it is robust to outliers and is well-suited for skewed numerical distributions.
+
+```
+df_clean['NumberOfWindows'] = (
+    pd.to_numeric(
+        df_clean['NumberOfWindows'].astype(str).str.strip(),
+        errors='coerce'
+    )
+)
+
+df_clean['NumberOfWindows'].fillna(
+    df_clean['NumberOfWindows'].median(),
+    inplace=True
+)
+df_clean['NumberOfWindows'].isna().sum()
+df_clean['NumberOfWindows'].dtype
+```
+# 4 Handle Building Dimension Missing Values
+The Building Dimension feature is a numerical variable that contained missing values. Since this variable represents a continuous measurement, it is important to handle missing data in a way that preserves the original distribution. Median imputation was applied to replace missing values, this was chosen instead of the mean to reduce the influence of potential outliers. After imputation, the column no longer contains missing values and is now suitable for exploratory analysis and machine learning modeling.
+
+```
+df_clean['Building Dimension'].fillna(
+    df_clean['Building Dimension'].median(), inplace=True
+)
+df_clean['Building Dimension'].isna().sum()
+```
+# 5 Handle Date_of_Occupancy
+The Date_of_Occupancy column is a date-based feature with missing values. Since machine learning models cannot directly interpret raw date formats, feature engineering was required to extract meaningful numerical information.
+The following steps were applied:
+
+- Converted the column to a datetime format, coercing invalid entries into NaN
+
+- Created a new feature, Building_Age, by subtracting the year of occupancy from the YearOfObservation
+
+- Imputed missing values in the newly created Building_Age feature using the median
+
+- Removed the original Date_of_Occupancy column to avoid redundancy
+
+This transformation improves model interpretability by capturing the age of the building, which is a more informative and usable predictor for insurance claim risk than the raw date itself.
+```
+df_clean['Date_of_Occupancy'] = pd.to_datetime(
+    df_clean['Date_of_Occupancy'], errors='coerce'
+)
+
+# Create Building Age feature
+df_clean['Building_Age'] = (
+    df_clean['YearOfObservation'] - df_clean['Date_of_Occupancy'].dt.year
+)
+
+# Fill missing ages with median
+df_clean['Building_Age'].fillna(
+    df_clean['Building_Age'].median(), inplace=True
+)
+
+# Drop original date column
+df_clean.drop(columns=['Date_of_Occupancy'], inplace=True)
+```
+
+# 6 Drop Irrelevant Columns
+Certain columns in the dataset do not contribute to predicting insurance claims and may introduce noise or data leakage if retained. In particular, the Customer Id column serves only as a unique identifier and contains no predictive information. This step helps create a cleaner and more reliable feature set for machine learning.
+
+```
+df_clean.columns = df_clean.columns.str.strip()
+df_clean.drop(columns=['Customer Id'], inplace=True)
+```
+# 7 Garden (Categorical → use mode)
+The Garden feature is a categorical variable with missing values. Since categorical data represents discrete categories rather than continuous measurements, mode imputation is an appropriate strategy. After this step, the Garden feature contains no missing values and is ready for encoding and modeling.
+
+```
+df_clean['Garden'].fillna(
+    df_clean['Garden'].mode()[0],
+    inplace=True
+)
+```
+
+# 8 Geo_Code Identifier / Location code
+The Geo_Code feature represents a geographical or location-based identifier and is categorical in nature. Although it is encoded numerically, it does not carry ordinal or continuous meaning. After imputation, the Geo_Code column contains no missing values and is suitable for categorical encoding during the modeling phase.
+
+```
+df_clean['Geo_Code'].fillna(
+    df_clean['Geo_Code'].mode()[0],
+    inplace=True
+)
+```
+
+
+
+# 9 Check Data Types After Cleaning
+At this stage of the preprocessing pipeline, a final validation was performed to ensure the dataset is fully prepared for machine learning modeling.
+
+Using df_clean.info() and df_clean.isna().sum(), the following conditions were confirmed:
+
+- All numerical features are correctly stored in numeric data types
+
+- All categorical features are stored as object types
+
+- There are no remaining missing values in any column
+
+- The dataset structure is consistent and free from data quality issues
+
+This final check is crucial because machine learning algorithms require clean, complete, and properly formatted data. Ensuring these conditions are met helps prevent runtime errors, improves model stability, and enhances predictive performance. With the dataset now fully cleaned and validated, it is ready for feature encoding, scaling, and model training.
+
+```
+df_clean.info()
+```
+
+```
+df_clean.isna().sum()
+```
+
+
+
+
+
+
+
+
+
+
 
 ## Author
 Monday Olawale
