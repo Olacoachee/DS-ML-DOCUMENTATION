@@ -586,5 +586,10 @@ plt.title("ROC Curve - Random Forest")
 plt.show()
 ```
 
+<img width="282" height="273" alt="ROC Curve Regression" src="https://github.com/user-attachments/assets/2642c098-fe19-46a3-9692-c1e59d363e3e" /> <br> Figure 23: ROC Curve Regression
+
+<img width="286" height="273" alt="ROC Curve RandomForest" src="https://github.com/user-attachments/assets/a315117d-d10a-495e-b81c-d729c2e67628" /> <br> Figure 24: ROC Curve RandomForest
+
+
 ## Author
 Monday Olawale
