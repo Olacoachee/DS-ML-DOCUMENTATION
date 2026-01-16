@@ -355,7 +355,7 @@ for col in cat_cols:
 ```
 <img width="361" height="269" alt="ClaimRate by BuildingPainted" src="https://github.com/user-attachments/assets/f518924f-70f3-40da-b742-255c9839b7ff" /> <br> Figure 12: ClaimRate by BuildingPainted
 
-
+<img width="363" height="275" alt="ClaimRate by BuildingFenced" src="https://github.com/user-attachments/assets/329ed30f-632e-414c-8b47-b860271b96de" /> <br> Figure 13: ClaimRate by BuildingFenced
 
 
 
