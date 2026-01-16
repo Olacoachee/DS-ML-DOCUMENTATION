@@ -469,7 +469,7 @@ log_reg.fit(X_train, y_train)
 
 This pipeline uses a ColumnTransformer to apply different preprocessing steps to different subsets of the data (likely numerical and categorical features) in parallel. The processed data is then combined and used to train a LogisticRegression model.
 
-# 2 Decision Tree Classifier
+# 2. Decision Tree Classifier
 In this step, a Decision Tree classifier was implemented to capture non-linear relationships in the data. The model was constructed using a pipeline that combines preprocessing with the classifier to ensure consistent data handling. Class imbalance was addressed using class_weight='balanced', model complexity was controlled through a maximum tree depth, and a fixed random state was applied for reproducibility. The model was trained using the training dataset.
 ```
 dt_model = Pipeline(steps=[
@@ -484,6 +484,9 @@ dt_model = Pipeline(steps=[
 dt_model.fit(X_train, y_train)
 ```
 
+<img width="364" height="210" alt="Pipeline DecisionTree" src="https://github.com/user-attachments/assets/c9ac59e1-33a9-408e-ae8b-af6a3e37e6bd" /> <br> Figure 17: Pipeline DecisionTree
+
+The workflow utilizes a ColumnTransformer to apply specific preprocessing steps in parallel to different data types (numerical and categorical). The processed data is then fed into a DecisionTreeClassifier model.
 
 
 ## Author
