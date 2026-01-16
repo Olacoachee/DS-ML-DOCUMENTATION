@@ -465,6 +465,9 @@ log_reg = Pipeline(steps=[
 log_reg.fit(X_train, y_train)
 ```
 
+<img width="361" height="208" alt="PipelineRegression" src="https://github.com/user-attachments/assets/917978d3-765f-47db-8086-33d955353ef0" /> <br> Figure 17: PipelineRegression
+
+This pipeline uses a ColumnTransformer to apply different preprocessing steps to different subsets of the data (likely numerical and categorical features) in parallel. The processed data is then combined and used to train a LogisticRegression model.
 
 ## Author
 Monday Olawale
