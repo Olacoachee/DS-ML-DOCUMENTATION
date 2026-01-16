@@ -299,7 +299,7 @@ num_cols = df_clean.select_dtypes(include=['int64', 'float64']).columns
 num_cols
 ```
 # 2.1 Distribution Plotting
-
+In this step, I visualized the distribution of numerical features against the target variable Claim. For each numerical column (excluding Claim itself), a boxplot was generated to show how the values vary between different claim outcomes. This helps identify potential patterns, trends, or outliers in the data that may influence claim occurrences.
 ```
 for col in num_cols:
     if col != 'Claim':
@@ -307,7 +307,6 @@ for col in num_cols:
         plt.title(f"{col} vs Claim")
         plt.show()
 ```
-In this step, I visualized the distribution of numerical features against the target variable Claim. For each numerical column (excluding Claim itself), a boxplot was generated to show how the values vary between different claim outcomes. This helps identify potential patterns, trends, or outliers in the data that may influence claim occurrences.
 
 <img width="387" height="265" alt="YearOfObservation vs Claim" src="https://github.com/user-attachments/assets/5202b44a-45e5-46c5-a8ca-4d9b548094af" /> <br> Figure 5: Year of Observation vs Claim
 
@@ -358,11 +357,6 @@ for col in cat_cols:
 
 
 
-<img width="354" height="269" alt="ClaimRate by Garden" src="https://github.com/user-attachments/assets/55e69df5-972a-4207-a91d-4f38393dc747" />
-<img width="361" height="269" alt="ClaimRate by BuildingPainted" src="https://github.com/user-attachments/assets/f518924f-70f3-40da-b742-255c9839b7ff" />
-<img width="363" height="275" alt="ClaimRate by BuildingFenced" src="https://github.com/user-attachments/assets/329ed30f-632e-414c-8b47-b860271b96de" />
-<img width="370" height="276" alt="ClaimRate by Settlement" src="https://github.com/user-attachments/assets/baf19637-a783-478d-9a34-df47e9886c63" />
-<img width="355" height="295" alt="ClaimRate by GeoCode" src="https://github.com/user-attachments/assets/56e0c438-421d-4dcf-a9ad-2c098e6a6ae1" />
 
 
 
