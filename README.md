@@ -353,6 +353,7 @@ for col in cat_cols:
     plt.ylabel("Claim Probability")
     plt.show()
 ```
+<img width="361" height="269" alt="ClaimRate by BuildingPainted" src="https://github.com/user-attachments/assets/f518924f-70f3-40da-b742-255c9839b7ff" /> <br> Figure 12: ClaimRate by BuildingPainted
 
 
 
