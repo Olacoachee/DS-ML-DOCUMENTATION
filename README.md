@@ -84,6 +84,8 @@ df = pd.read_excel(
 
 df.head()
 ```
+<img width="721" height="120" alt="Data View" src="https://github.com/user-attachments/assets/b994a002-d7fb-4773-8f21-d3352615d5c2" /> <br> Table 1: Data View
+
 ## 2. Basic Information
 
 The df.info() method was used to obtain a concise summary of the dataset, including the total number of observations, number of features, data types of each column, and the presence of missing values.
