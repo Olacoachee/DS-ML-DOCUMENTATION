@@ -265,11 +265,31 @@ df_clean.info()
 df_clean.isna().sum()
 ```
 
+# STEP 5: EXPLORATORY DATA ANALYSIS (EDA)
+The distribution of the target variable, Claim, was analyzed to understand the proportion of buildings that experienced at least one insurance claim during the insured period versus those that did not.
+```
+df_clean['Claim'].value_counts(normalize=True)
+```
+# 1 Target variable plotting
+A count plot was used to visually represent the distribution of the target variable, Claim, where:
 
+- 0 indicates buildings without insurance claims
 
+- 1 indicates buildings with at least one insurance claim
+```
+sns.countplot(x='Claim', data=df_clean)
+plt.title("Distribution of Insurance Claims")
+plt.xlabel("Claim (0 = No, 1 = Yes)")
+plt.ylabel("Count")
+plt.show()
+```
 
+<img width="388" height="266" alt="Distribution of Ins Claim" src="https://github.com/user-attachments/assets/d728fbac-99a2-491f-80c2-ad98e3164a63" /> <br>
+Figure 4: Distribution of the Target Variable (Claim vs No Claim)
 
-
+The distribution of the target variable shows that non-claim cases are more
+frequent than claim cases. This indicates a class imbalance, which is common
+in insurance datasets and must be considered during model evaluation.
 
 
 
