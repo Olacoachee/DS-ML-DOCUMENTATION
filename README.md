@@ -313,15 +313,15 @@ In this step, I visualized the distribution of numerical features against the ta
 
 <img width="367" height="278" alt="Insured_Period vs Claim" src="https://github.com/user-attachments/assets/406b9cc6-55b4-401b-b207-16ae233475d4" /> <br> Figure 6: Insured_Period vs Claim
 
-<img width="372" height="272" alt="Residential vs Claim" src="https://github.com/user-attachments/assets/847722ee-f8bd-4a1e-a430-a8e63af05672" /> Figure 7: Residential vs Claim
+<img width="372" height="272" alt="Residential vs Claim" src="https://github.com/user-attachments/assets/847722ee-f8bd-4a1e-a430-a8e63af05672" /> <br> Figure 7: Residential vs Claim
 
-<img width="384" height="278" alt="Building Dimension vs Claim" src="https://github.com/user-attachments/assets/37c12340-9288-4116-a511-3aaca014c366" /> Figure 8: Building Dimension vs Claim
+<img width="384" height="278" alt="Building Dimension vs Claim" src="https://github.com/user-attachments/assets/37c12340-9288-4116-a511-3aaca014c366" /> <br> Figure 8: Building Dimension vs Claim
 
-<img width="358" height="268" alt="Building_Type vs Claim" src="https://github.com/user-attachments/assets/bf6d19a3-5925-486d-b4ca-dd06b68de312" /> Figure 9: Building_Type vs Claim
+<img width="358" height="268" alt="Building_Type vs Claim" src="https://github.com/user-attachments/assets/bf6d19a3-5925-486d-b4ca-dd06b68de312" /> <br> Figure 9: Building_Type vs Claim
 
-<img width="363" height="267" alt="NumberOfWindows vs Claim" src="https://github.com/user-attachments/assets/2efd27da-481a-40b2-8af9-52dd42dc8646" /> Figure 10: NumberOfWindows vs Claim
+<img width="363" height="267" alt="NumberOfWindows vs Claim" src="https://github.com/user-attachments/assets/2efd27da-481a-40b2-8af9-52dd42dc8646" /> <br> Figure 10: NumberOfWindows vs Claim
 
-<img width="378" height="269" alt="Building_Age vs Claim" src="https://github.com/user-attachments/assets/491aafe1-877d-4711-ad18-051529177a6a" /> Figure 11: Building_Age vs Claim
+<img width="378" height="269" alt="Building_Age vs Claim" src="https://github.com/user-attachments/assets/491aafe1-877d-4711-ad18-051529177a6a" /> <br> Figure 11: Building_Age vs Claim
 
 
 
