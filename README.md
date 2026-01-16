@@ -514,5 +514,31 @@ Three machine learning models were trained to predict the probability of insuran
 
 Class weights were applied to address class imbalance.
 
+# STEP 8: MODEL EVALUATION
+## 1. Create an Evaluation Function (Clean & Reusable)
+In this step, a reusable evaluation function was created to assess model performance on the test dataset. The function calculates key classification metrics including accuracy, precision, recall, F1-score, and ROC-AUC, and also outputs the confusion matrix. This allows consistent, repeatable evaluation for multiple models while providing a clear overview of predictive performance.
+```
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score,
+    f1_score, roc_auc_score, confusion_matrix
+)
+
+def evaluate_model(model, X_test, y_test, model_name="Model"):
+    y_pred = model.predict(X_test)
+    y_proba = model.predict_proba(X_test)[:, 1]
+    
+print(f"📌 {model_name} Performance")
+    print("-" * 40)
+    print(f"Accuracy : {accuracy_score(y_test, y_pred):.4f}")
+    print(f"Precision: {precision_score(y_test, y_pred):.4f}")
+    print(f"Recall   : {recall_score(y_test, y_pred):.4f}")
+    print(f"F1-score : {f1_score(y_test, y_pred):.4f}")
+    print(f"ROC-AUC  : {roc_auc_score(y_test, y_proba):.4f}")
+    
+print("\nConfusion Matrix:")
+    print(confusion_matrix(y_test, y_pred))
+    print("\n")
+ ```
+
 ## Author
 Monday Olawale
