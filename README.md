@@ -390,7 +390,14 @@ The strongest relationship in the data is a high positive correlation (0.96) bet
 The variable Claim has weak positive correlations with Building Dimension (0.30), NumberOfWindows (0.17), and Insured_Period (0.09). <br>
 The correlation matrix shows moderate relationships between building-related variables and claim occurrence. No extreme multicollinearity is observed, making the dataset suitable for machine learning models.
 
-
+# STEP 6: MODELING PREPROCESSING
+## Proceed to Modeling Preprocessing will include:
+1. Separate Features and Target
+In this step, the dataset was prepared for modeling by separating the independent variables (features) from the dependent variable (target). All predictor variables were assigned to X, while the target variable Claim was isolated as y, forming the basis for subsequent preprocessing and model training.
+```
+X = df_clean.drop(columns='Claim')
+y = df_clean['Claim']
+```
 
 ## Author
 Monday Olawale
