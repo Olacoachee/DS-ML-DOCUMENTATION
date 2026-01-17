@@ -504,7 +504,7 @@ rf_model = Pipeline(steps=[
 rf_model.fit(X_train, y_train)
 ```
 
-<img width="364" height="212" alt="Pipeline RandomForest" src="https://github.com/user-attachments/assets/d36c21ca-0e02-426f-8973-4da9a0f81692" /> <br> Figure 19: Pipeline RandomForest
+<img width="364" height="212" alt="Pipeline RandomForest" src="https://github.com/user-attachments/assets/d36c21ca-0e02-426f-8973-4da9a0f81692" /> <br> Figure 20: Pipeline RandomForest
 
 The workflow utilizes a ColumnTransformer to apply specific preprocessing steps in parallel to different data types (numerical and categorical). The processed data is then fed into a RandomForestClassifier model.
 Three machine learning models were trained to predict the probability of insurance claims:
@@ -544,7 +544,7 @@ In this step, the Logistic Regression baseline model was evaluated on the test d
 ```
 evaluate_model(log_reg, X_test, y_test, "Logistic Regression")
 ```
-<img width="417" height="249" alt="Regression Performance" src="https://github.com/user-attachments/assets/b547390c-e123-49fc-b450-22ca4d7e879b" /> <br> Figure 20: Regression Performance
+<img width="417" height="249" alt="Regression Performance" src="https://github.com/user-attachments/assets/b547390c-e123-49fc-b450-22ca4d7e879b" /> <br> Figure 21: Regression Performance
 
 The Logistic Regression model exhibits moderate overall performance but struggles with precision, indicating a high rate of false positives. <br>
 The confusion matrix [[812 293], [160 167]] provides a detailed breakdown of predictions: The high number of false positives (293) relative to true positives (167) confirms the low precision score. The model is cautious about predicting the positive class correctly but often flags too many instances incorrectly.
@@ -555,7 +555,7 @@ In this step, the Decision Tree model was evaluated on the test dataset using th
 evaluate_model(dt_model, X_test, y_test, "Decision Tree")
 ```
 
-<img width="417" height="246" alt="Decision Tree Performance" src="https://github.com/user-attachments/assets/91c5ff50-55ce-4a74-9065-34216301d93a" /> <br> Figure 21: Decision Tree Performance
+<img width="417" height="246" alt="Decision Tree Performance" src="https://github.com/user-attachments/assets/91c5ff50-55ce-4a74-9065-34216301d93a" /> <br> Figure 22: Decision Tree Performance
 
 The Decision Tree model has moderate overall accuracy but poor precision, indicating that when it predicts the positive class, it is often incorrect. <br>
 The confusion matrix [[684 421], [120 207]] provides a detailed breakdown of predictions: The large number of false positives (421) relative to true positives (207) confirms the low precision score. The model often predicts the positive class incorrectly, leading to many false alarms.
@@ -566,7 +566,7 @@ In this step, the Random Forest model was evaluated on the test dataset using th
 evaluate_model(rf_model, X_test, y_test, "Random Forest")
 ```
 
-<img width="416" height="245" alt="Random Forest Performance" src="https://github.com/user-attachments/assets/94f2b8cd-eb00-4d82-b161-c5eac533d977" /> <br> Figure 22: Random Forest Performance
+<img width="416" height="245" alt="Random Forest Performance" src="https://github.com/user-attachments/assets/94f2b8cd-eb00-4d82-b161-c5eac533d977" /> <br> Figure 23: Random Forest Performance
 
 The Random Forest model has moderate accuracy but low precision, indicating that when it predicts the positive class, it is often incorrect.
 This means the model is decent at overall classification but generates many false alarms for positive cases.
@@ -586,14 +586,14 @@ plt.title("ROC Curve - Random Forest")
 plt.show()
 ```
 
-<img width="282" height="273" alt="ROC Curve Regression" src="https://github.com/user-attachments/assets/2642c098-fe19-46a3-9692-c1e59d363e3e" /> <br> Figure 23: ROC Curve Regression
+<img width="282" height="273" alt="ROC Curve Regression" src="https://github.com/user-attachments/assets/2642c098-fe19-46a3-9692-c1e59d363e3e" /> <br> Figure 24: ROC Curve Regression
 
 The figure provided is a Receiver Operating Characteristic (ROC) curve for a logistic regression model, which graphically illustrates the model's performance at distinguishing between two classes. 
 - AUC Score: The Area Under the Curve (AUC) is 0.68. An AUC score between 0.5 and 0.7 indicates a weak to acceptable ability to distinguish between classes, meaning the model is better than random guessing (AUC 0.5) but has limited predictive power for real-world application on its own.
 - Curve Shape: The curve plots the True Positive Rate (sensitivity) against the False Positive Rate (1 - specificity). A perfect model's curve would hug the top-left corner, reaching a true positive rate of 1.0 while maintaining a false positive rate of 0.0. This curve, while better than the diagonal random guessing line, is relatively close to the center, reinforcing the moderate performance indicated by the AUC score.
 - Trade-off: The curve shows the trade-off between sensitivity and specificity at different decision thresholds. As the model's ability to identify more true positives increases (moving up the y-axis), it also incorrectly flags more false positives (moving right on the x-axis). 
 
-<img width="286" height="273" alt="ROC Curve RandomForest" src="https://github.com/user-attachments/assets/a315117d-d10a-495e-b81c-d729c2e67628" /> <br> Figure 24: ROC Curve RandomForest
+<img width="286" height="273" alt="ROC Curve RandomForest" src="https://github.com/user-attachments/assets/a315117d-d10a-495e-b81c-d729c2e67628" /> <br> Figure 25: ROC Curve RandomForest
 
 The figure provided is a Receiver Operating Characteristic (ROC) curve for a Random Forest model, which graphically illustrates the model's ability to distinguish between two classes.
 - AUC Score: The Area Under the Curve (AUC) is 0.67. An AUC score between 0.5 and 0.7 indicates a weak to acceptable ability to distinguish between classes, meaning the model is better than random guessing (AUC 0.5) but has limited predictive power for real-world application on its own.
@@ -641,7 +641,7 @@ results = pd.DataFrame({
 
 ### results
 
-<img width="454" height="214" alt="Model Comparison" src="https://github.com/user-attachments/assets/5065fa82-2f52-48e5-90db-b6620b76a0fa" /> <br> Figure 25: Model Comparison
+<img width="454" height="214" alt="Model Comparison" src="https://github.com/user-attachments/assets/5065fa82-2f52-48e5-90db-b6620b76a0fa" /> <br> Figure 26: Model Comparison
 
 The Random Forest model generally shows the strongest performance in terms of overall accuracy and precision, while the Decision Tree model achieves the highest recall.
 Among the evaluated models, the Random Forest classifier outperformed the others across most evaluation metrics, particularly ROC-AUC and F1-score. This indicates a stronger ability to distinguish between buildings that are likely to experience insurance claims and those that are not.
