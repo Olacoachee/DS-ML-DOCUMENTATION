@@ -484,7 +484,7 @@ dt_model = Pipeline(steps=[
 dt_model.fit(X_train, y_train)
 ```
 
-<img width="364" height="210" alt="Pipeline DecisionTree" src="https://github.com/user-attachments/assets/c9ac59e1-33a9-408e-ae8b-af6a3e37e6bd" /> <br> Figure 18: Pipeline DecisionTree
+<img width="364" height="210" alt="Pipeline DecisionTree" src="https://github.com/user-attachments/assets/c9ac59e1-33a9-408e-ae8b-af6a3e37e6bd" /> <br> Figure 19: Pipeline DecisionTree
 
 The workflow utilizes a ColumnTransformer to apply specific preprocessing steps in parallel to different data types (numerical and categorical). The processed data is then fed into a DecisionTreeClassifier model.
 
